@@ -1,0 +1,36 @@
+.inputField {
+    margin-top:.55rem;
+  }
+
+  #submitBtn {
+    margin-top:.65rem;
+  }
+
+  .task-list-wrapper {
+    flex: 1;
+    margin: 0 20px 20px;
+  }
+
+  .task-item {
+    color: var(--grey);
+    padding: 15px 15px;
+    border: 2px solid var(--grey);
+    background: var(--tertiary);
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .task-list-wrapper {
+    flex-basis: 100%;
+  }
+
+  header {
+    text-align: center;
+
+  }
+
+  form {
+    
+    display: inline-block;
+}
+  
