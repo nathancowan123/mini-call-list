@@ -20,7 +20,7 @@ var taskFormHandler = function(event) {
    document.querySelector("input[name='phone-input'").value = "";
  document.querySelector("input[name='email-input'").value = "";
 
-  var taskDataObj = {
+  var clientDataObj = {
     name: nameInput,
     phone: phoneInput,
     email: emailInput
@@ -28,10 +28,10 @@ var taskFormHandler = function(event) {
 
   console.log(nameInput,phoneInput,emailInput)
 
-  createClientEl(taskDataObj);
+  createClientEl(clientDataObj);
 };
 
-var createClientEl = function(taskDataObj) {
+var createClientEl = function(clientDataObj) {
   // create list item
   var listItemEl = document.createElement("p");
   listItemEl.className = "client-name";
