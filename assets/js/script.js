@@ -51,16 +51,11 @@ var interestedContactEl = document.querySelector('#interested-contact')
        <td>
        <div class="dropdown">
        <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown-${rowNum}" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Dropdown button
+         ${row.statusBtn}
+         <span class="statusSpan"></span>
        </button>
        <div class="dropdown-menu" aria-labelledby="statusDropdown-${rowNum}">
-         <a class="dropdown-item" href="#" id="interested-contact">Interested in Contact Info</a>
-         <a class="dropdown-item" href="#" id="PAL">Pre-Approval Requested</a>
-         <a class="dropdown-item" href="#" id="SPA">SPA</a>
-         <a class="dropdown-item" href="#" id="sent-LE">Sent LE</a>
-         <a class="dropdown-item" href="#" id="i2p">Accepted I2P</a>
-         <a class="dropdown-item" href="#" id="appraisal-complete">Appraisal Complete</a>
-         <a class="dropdown-item" href="#" id="c2c">Clear to Close</a>
+         ${row.statusState.map((state) => `<a class="dropdown-item" href="#" data-id="${state}">${state}</a>`).join('')}
        </div>
      </div>
        </td>
@@ -136,6 +131,17 @@ var createClientEl = function myFunction(clientDataObj) {
   clientEmail.innerHTML = "<p name='email-input'>"+ clientDataObj.email +  "</p>";
   clientArea.innerHTML =  clientDataObj.area;
   clientOptOut.innerHTML = "<div class='dropdown'><button class='btn btn-secondary dropdown-toggle' type='button' id='statusDropdown-${rowNum}' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Dropdown button</button><div class='dropdown-menu' aria-labelledby='statusDropdown-${rowNum}'><a class='dropdown-item' href='#' id='interested-contact'>Interested in Contact Info</a><a class='dropdown-item' href='#' id='PAL'>Pre-Approval Requested</a><a class='dropdown-item' href='#' id='SPA'>SPA</a><a class='dropdown-item' href='#' id='sent-LE'>Sent LE</a><a class='dropdown-item' href='#' id='i2p'>Accepted I2P</a><a class='dropdown-item' href='#' id='appraisal-complete'>Appraisal Complete</a><a class='dropdown-item' href='#' id='c2c'>Clear to Close</a></div>";
+
+  // Define an array to hold the client data objects
+var clients = [];
+
+// Add the client data object to the array
+clients.push(clientDataObj);
+
+// Convert the array to a JSON string
+var json = JSON.stringify(clients);
+console.log(json)
+
 };
 
     // End Input Handler
@@ -158,10 +164,15 @@ var createClientEl = function myFunction(clientDataObj) {
         event.target.textContent = 'Do Not Call'
       }
     })
+  
+
+    // Status Button
+
+  
 
 
   
     
 
  formEl.addEventListener("submit", taskFormHandler);
- pageContentEl.addEventListener("click", buttonFunc);
+

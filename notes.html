@@ -1,88 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Realtor Call List</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css"> 
-    <link rel="stylesheet" href="./assets/js/script.js">
-    <link rel="shortcut icon" type="image/ico" href="/images/Favicon.ico"/>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-    <title>Florida Realtor Call List </title>
-</head>
-
-<body>
-
-  <!--New Client Input-->
-  <header class="bg-dark ">
-    <form id="new-client-form">
-      <div class="row">
-        <div class="col-sm form-group">
-          <input class="form-control inputField" type="text" placeholder="Full Name" name="name-input">
-        </div>
-        <div class="col-sm form-group">
-          <input class="form-control inputField" type="text" placeholder="Phone #" name="phone-input">
-        </div>
-        <div class="col-sm form-group">
-          <input class="form-control inputField" type="text" placeholder="Email" name="email-input">
-        </div>
-        <div class="col-sm form-group">
-          <input class="form-control inputField" type="text" placeholder="Area" name="area-input">
-        </div>
-        <div class="col-sm form-group">
-          <button type="submit" class="btn btn-primary mb-2" id="submitBtn">Submit</button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-
-    <!--Table Header-->
-    <main class="page-content" id="page-content">
-    
-      <div id="table-parent">
-        <table class="table table-dark table-hover">
-         <thead >
-          <tr class="h4 sticky-top">
-            <th scope="col">Mark as Hot</th>
-            <th scope="col">Name</th>
-            <th scope="col">Call</th>       
-            <th scope="col">Text</th>
-            <th scope="col">Email</th>     
-            <th scope="col">Area</th>
-            <th scope="col">Opt-Out</th>   
-          </tr>
-        </thead>
-      
-
-        <!--Table Body-->
-      
-        <tbody id="myTable">
-           <tr data-id="1"><td><button class="btn btn-secondary dropdown-toggle" data-action="status-button" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Dropdown button</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#" id="interested-contact">Interested in Contact Info</a><a class="dropdown-item" href="#" id="PAL">Pre-Approval Requested</a><a class="dropdown-item" href="#" id="SPA">SPA</a><a class="dropdown-item" href="#" id="sent-LE">Sent LE</a><a class="dropdown-item" href="#" id="i2p">Accepted I2P</a><a class="dropdown-item" href="#" id="appraisal-complete">Appraisal Complete</a><a class="dropdown-item" href="#" id="c2c">Clear to Close</a></div></td><td><p>Yazan Abdelaal</p></td><td><a href="tel:+1813-507-3287"><button type="button" class="btn btn-primary callBtn" id="callBtnId-1">Call</button></a></td><td><div class="dropdown"> <button class="btn btn-info dropdown-toggle textBtn" type="button" id="textBtn-1" data-bs-toggle="dropdown" aria-expanded="false">Text </button> <ul class="dropdown-menu" aria-labelledby="textBtn-1"> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">First Talk To</a></li><li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Calendly</a></li> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Not The Right Time</a></li> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Non-QM</a></li></a></li> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Top-Level Communication </a></li></ul></div><td><p name="email-input"> </p></td><td>Brandon</td><td>  <button type="button" class="btn btn-secondary"  data-action="opt-out">Request</button></td></tr>
-           <tr data-id="2"><td><button class="btn btn-secondary dropdown-toggle" data-action="status-button" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Dropdown button</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#" id="interested-contact">Interested in Contact Info</a><a class="dropdown-item" href="#" id="PAL">Pre-Approval Requested</a><a class="dropdown-item" href="#" id="SPA">SPA</a><a class="dropdown-item" href="#" id="sent-LE">Sent LE</a><a class="dropdown-item" href="#" id="i2p">Accepted I2P</a><a class="dropdown-item" href="#" id="appraisal-complete">Appraisal Complete</a><a class="dropdown-item" href="#" id="c2c">Clear to Close</a></div></td><td><p>Yazan Abdelaal</p></td><td><a href="tel:+1813-507-3287"><button type="button" class="btn btn-primary callBtn" id="callBtnId-1">Call</button></a></td><td><div class="dropdown"> <button class="btn btn-info dropdown-toggle textBtn" type="button" id="textBtn-1" data-bs-toggle="dropdown" aria-expanded="false">Text </button> <ul class="dropdown-menu" aria-labelledby="textBtn-1"> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">First Talk To</a></li><li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Calendly</a></li> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Not The Right Time</a></li> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Non-QM</a></li></a></li> <li><a class="dropdown-item" href="sms:813-507-3287&amp;body=">Top-Level Communication </a></li></ul></div><td><p name="email-input"> </p></td><td>Brandon</td><td>  <button type="button" class="btn btn-secondary"  data-action="opt-out">Request</button></td></tr>
-           <tr data-id="3"><td><button class="btn btn-secondary dropdown-toggle" data-action="status-button" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Dropdown button</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#" id="interested-contact">Interested in Contact Info</a><a class="dropdown-item" href="#" id="PAL">Pre-Approval Requested</a><a class="dropdown-item" href="#" id="SPA">SPA</a><a class="dropdown-item" href="#" id="sent-LE">Sent LE</a><a class="dropdown-item" href="#" id="i2p">Accepted I2P</a><a class="dropdown-item" href="#" id="appraisal-complete">Appraisal Complete</a><a class="dropdown-item" href="#" id="c2c">Clear to Close</a></div></td><td><p>Mary Adrian</p></td><td><a href="tel:+1813-951-4733"><button type="button" class="btn btn-primary callBtn" id="callBtnId-2">Call</button></a></td><td><div class="dropdown"> <button class="btn btn-info dropdown-toggle textBtn" type="button" id="textBtn-2" data-bs-toggle="dropdown" aria-expanded="false">Text </button> <ul class="dropdown-menu" aria-labelledby="textBtn-2"> <li><a class="dropdown-item" href="sms:813-951-4733&amp;body=">First Talk To</a></li><li><a class="dropdown-item" href="sms:813-951-4733&amp;body=">Calendly</a></li> <li><a class="dropdown-item" href="sms:813-951-4733&amp;body=">Not The Right Time</a></li> <li><a class="dropdown-item" href="sms:813-951-4733&amp;body=">Non-QM</a></li></a></li> <li><a class="dropdown-item" href="sms:813-951-4733&amp;body=">Top-Level Communication </a></li></ul></div><td><p name="email-input"> </p></td><td>Brandon</td><td>  <button type="button" class="btn btn-secondary"  data-action="opt-out">Request</button></td></tr>
-           <tr data-id="4"><td><button class="btn btn-secondary dropdown-toggle" data-action="status-button" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Dropdown button</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#" id="interested-contact">Interested in Contact Info</a><a class="dropdown-item" href="#" id="PAL">Pre-Approval Requested</a><a class="dropdown-item" href="#" id="SPA">SPA</a><a class="dropdown-item" href="#" id="sent-LE">Sent LE</a><a class="dropdown-item" href="#" id="i2p">Accepted I2P</a><a class="dropdown-item" href="#" id="appraisal-complete">Appraisal Complete</a><a class="dropdown-item" href="#" id="c2c">Clear to Close</a></div></td><td><p>Randy Adrian</p></td><td><a href="tel:+1(813) 404-9361"><button type="button" class="btn btn-primary callBtn" id="callBtnId-3">Call</button></a></td><td><div class="dropdown"> <button class="btn btn-info dropdown-toggle textBtn" type="button" id="textBtn-3" data-bs-toggle="dropdown" aria-expanded="false">Text </button> <ul class="dropdown-menu" aria-labelledby="textBtn-3"> <li><a class="dropdown-item" href="sms:(813) 404-9361&amp;body=">First Talk To</a></li><li><a class="dropdown-item" href="sms:(813) 404-9361&amp;body=">Calendly</a></li> <li><a class="dropdown-item" href="sms:(813) 404-9361&amp;body=">Not The Right Time</a></li> <li><a class="dropdown-item" href="sms:(813) 404-9361&amp;body=">Non-QM</a></li></a></li> <li><a class="dropdown-item" href="sms:(813) 404-9361&amp;body=">Top-Level Communication </a></li></ul></div><td><p name="email-input"> </p></td><td>Brandon</td><td>  <button type="button" class="btn btn-secondary"  data-action="opt-out">Request</button></td></tr>
-           <tr data-id="5"><td><button class="btn btn-secondary dropdown-toggle" data-action="status-button" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Dropdown button</button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#" id="interested-contact">Interested in Contact Info</a><a class="dropdown-item" href="#" id="PAL">Pre-Approval Requested</a><a class="dropdown-item" href="#" id="SPA">SPA</a><a class="dropdown-item" href="#" id="sent-LE">Sent LE</a><a class="dropdown-item" href="#" id="i2p">Accepted I2P</a><a class="dropdown-item" href="#" id="appraisal-complete">Appraisal Complete</a><a class="dropdown-item" href="#" id="c2c">Clear to Close</a></div></td> <td><p>Anai Alejo</p></td><td><a href="tel:+1813-648-7359"><button type="button" class="btn btn-primary callBtn" id="callBtnId-4">Call</button></a></td><td><div class="dropdown"> <button class="btn btn-info dropdown-toggle textBtn" type="button" id="textBtn-4" data-bs-toggle="dropdown" aria-expanded="false">Text </button> <ul class="dropdown-menu" aria-labelledby="textBtn-4"> <li><a class="dropdown-item" href="sms:813-648-7359&amp;body=">First Talk To</a></li><li><a class="dropdown-item" href="sms:813-648-7359&amp;body=">Calendly</a></li> <li><a class="dropdown-item" href="sms:813-648-7359&amp;body=">Not The Right Time</a></li> <li><a class="dropdown-item" href="sms:813-648-7359&amp;body=">Non-QM</a></li></a></li> <li><a class="dropdown-item" href="sms:813-648-7359&amp;body">Top-Level Communication </a></li></ul></div><td><p name="email-input"> </p></td><td>Brandon</td><td>  <button type="button" class="btn btn-secondary"  data-action="opt-out">Request</button></td></tr>
-         </tbody>
-       </table> 
-      </div>
-
-      </main>
-
-
-
-
-
-
-
-
-     
-
-       
-      
-    <script src="./assets/js/script.js"></script>
- </body>
- </html>
-
+<div class="dropdown">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    id="statusDropdown-${rowNum}"
+    data-bs-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="statusDropdown-${rowNum}">
+    <a class="dropdown-item" href="#" id="interested-contact">
+      Interested in Contact Info
+    </a>
+    <a class="dropdown-item" href="#" id="PAL">Pre-Approval Requested</a>
+    <a class="dropdown-item" href="#" id="SPA">SPA</a>
+    <a class="dropdown-item" href="#" id="sent-LE">Sent LE</a>
+    <a class="dropdown-item" href="#" id="i2p">Accepted I2P</a>
+    <a class="dropdown-item" href="#" id="appraisal-complete">
+      Appraisal Complete
+    </a>
+    <a class="dropdown-item" href="#" id="c2c">Clear to Close</a>
+  </div>
+</div>
