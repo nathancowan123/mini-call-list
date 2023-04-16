@@ -1,43 +1,7 @@
 var formEl = document.querySelector("#new-client-form");
 var tasksToDoEl = document.querySelector("#new-client");
-
-// id="statusBtn" onClick event
-var interested = function() {
-    document.getElementById("statusBtn").style.background = "#F62394";
-    document.getElementById("statusBtn").innerHTML = "Interested in Partnership";
-  }
-
-var PAL = function() {
-    document.getElementById("statusBtn").style.background = "#83CE01";
-    document.getElementById("statusBtn").innerHTML = "Pre-Approval Requested";    
-  }
-
-var SPA = function() {
-    document.getElementById("statusBtn").style.background = "#00B3D4";
-    document.getElementById("statusBtn").innerHTML = "SPA";
-  }
-
-var LE = function() {
-    document.getElementById("statusBtn").style.background = "#8B20BB";
-    document.getElementById("statusBtn").innerHTML = "Sent LE";
-  }
-
-var i2p = function() {
-    document.getElementById("statusBtn").style.background = "#007AC7";
-    document.getElementById("statusBtn").innerHTML = "Accepted I2P";
-  }
-
-var appraisal = function() {
-    document.getElementById("statusBtn").style.background = "#0024BA";
-    document.getElementById("statusBtn").innerHTML = "Appraisal Complete";
-  }
-
-var c2c = function() {
-    document.getElementById("statusBtn").style.background = "#01B700";
-    document.getElementById("statusBtn").innerHTML = "Clear to Close";
-  }
-
-//OptOut Client onClick event
+var pageContentEl = document.querySelector("#page-content");
+var interestedContactEl = document.querySelector('#interested-contact')
 
 
 //Input form Handler
@@ -103,4 +67,40 @@ var taskFormHandler = function(event) {
     };
     // End Input Handler
 
+
+    // // Button Click
+    const tableParent = document.getElementById('table-parent')
+
+    tableParent.addEventListener('click', function (event) {
+      // Check if the clicked element is a button with data-action="opt-out"
+      if (
+        event.target.tagName.toLowerCase() === 'button' &&
+        event.target.getAttribute('data-action') === 'opt-out'
+      ) {
+        // Remove the "btn-secondary" class and add the "btn-danger" class
+        event.target.classList.remove('btn-secondary')
+        event.target.classList.add('btn-danger')
+    
+        // Change the text on the button
+        event.target.textContent = 'Do Not Call'
+      }
+    })
+    
+    const dropdownMenu = document.querySelector('.dropdown-menu')
+    
+    dropdownMenu.addEventListener('click', function (event) {
+      // Get the id of the selected dropdown menu item
+      const selectedOptionId = event.target.getAttribute('id')
+    
+      // Log the selected option id
+      console.log(selectedOptionId)
+    })
+    
+
+    
+    
+
+
+
  formEl.addEventListener("submit", taskFormHandler);
+ pageContentEl.addEventListener("click", buttonFunc);
