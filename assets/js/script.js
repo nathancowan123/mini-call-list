@@ -25,7 +25,7 @@ var interestedContactEl = document.querySelector('#interested-contact')
        </td>
        <td>
          <a href="tel:+1${row.phone}">
-           <button type="button" class="btn btn-primary callBtn" id="callBtnId-${rowNum}">Call</button>
+           <button type="button" class="btn btn-primary callBtn" id="callBtnId-${rowNum}">${row.phone}</button>
          </a>
        </td>
        <td>
@@ -126,7 +126,7 @@ var createClientEl = function myFunction(clientDataObj) {
   //Inner HTML
   cellNo.innerHTML = "<button type='button' class='btn btn-secondary' data-action='opt-out'>Request</button>";
   clientName.innerHTML =  "<p class='client-name'>"+ clientDataObj.name + "</p>";
-  clientCall.innerHTML = "<a href='tel:+" + clientDataObj.phone + "'><button type='button' class='btn btn-primary callBtn' id='callBtnId-0'>Call</button></a>";
+  clientCall.innerHTML = "<a href='tel:+" + clientDataObj.phone + "'><button type='button' class='btn btn-primary callBtn' id='callBtnId-0'>" + clientDataObj.phone +"</button></a>";
   clientText.innerHTML = "<div class='dropdown'> <button class='btn btn-info dropdown-toggle textBtn' type='button' id='textBtn-0' data-bs-toggle='dropdown' aria-expanded='false'>Text </button> <ul class='dropdown-menu' aria-labelledby='textBtn-0'> <li><a class='dropdown-item' href='sms:" + clientDataObj.phone + "'&amp;body='>First Talk To</a></li><li><a class='dropdown-item' href='sms:" + clientDataObj.phone + "'&amp;body=' href='sms:" + clientDataObj.phone + "'&amp;body=' href='sms:" + clientDataObj.phone + "'&amp;body=' href='sms:" + clientDataObj.phone + "'&amp;body='>Top-Level Communication </a></li></ul></div>";
   clientEmail.innerHTML = "<p name='email-input'>"+ clientDataObj.email +  "</p>";
   clientArea.innerHTML =  clientDataObj.area;
